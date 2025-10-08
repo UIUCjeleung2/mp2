@@ -83,7 +83,7 @@ function PokemonBar({sx, onSubmit, onClick}: PokemonBarProperty) {
                 <FormControlLabel value="descending" control={<Radio />} label="Descending" />
             </RadioGroup> */}
 
-            <RoundedSearchBar onClick = {handleSearchSubmit} sortOrder={sortOrder}></RoundedSearchBar>
+            <RoundedSearchBar onClick = {handleSearchSubmit}></RoundedSearchBar>
 
 
         </AnimatedContainer>
