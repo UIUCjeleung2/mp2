@@ -81,7 +81,7 @@ export default function Gallery({sx, generation}: GalleryProperty) {
 
         // Delay route change until animation completes
         setTimeout(() => {
-            navigate(`/pokemon/${name}/${id}`);
+            navigate(`/mp2/pokemon/${name}/${id}`);
         }, 50); // Match this to your CSS transition duration
     };
 

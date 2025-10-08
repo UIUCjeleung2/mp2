@@ -37,7 +37,7 @@ const PokedexPage = () => {
 
     // Delay route change until animation completes
     setTimeout(() => {
-      navigate('/');
+      navigate('/mp2');
     }, 1000); // Match this to your CSS transition duration
   };
 

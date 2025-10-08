@@ -15,7 +15,7 @@ const HomePage = () => {
 
     // Delay route change until animation completes
     setTimeout(() => {
-      navigate('/pokemon');
+      navigate('/mp2/pokemon');
     }, 1000);
   };
 

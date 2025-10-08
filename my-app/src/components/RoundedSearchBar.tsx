@@ -152,7 +152,7 @@ export default function RoundedSearchBar({onClick, sortOrder}: RoundedSearchBarP
             const index = options.findIndex(
                 (option) => option.name.toLowerCase() === searchValue.toLowerCase()
                 );
-            navigate(`/pokemon/${searchValue}/${index + 1}`);
+            navigate(`/mp2/pokemon/${searchValue}/${index + 1}`);
             // CHANGE HERE TO MAKE OPTIONS.name match with the thing
             // if (options.includes(searchValue)) {
             //     ;
