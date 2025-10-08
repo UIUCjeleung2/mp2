@@ -1,8 +1,6 @@
-import react from "react";
 import { useParams } from "react-router-dom";
 import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
@@ -71,6 +69,7 @@ export default function PokemonPage() {
             >
 
                 <img   
+                    alt=""
                     src={`http://play.pokemonshowdown.com/sprites/ani/${fixPokemonName(name!)}.gif`}
                     onError={(e) => {
                         e.currentTarget.src = "https://img.pokemondb.net/sprites/home/normal/unown-qm.png";

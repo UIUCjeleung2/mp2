@@ -6,15 +6,15 @@ it dynamically.
 
 */
 
-import React, {useState, useRef, useEffect} from "react";
+import React from "react";
 import Title from "./Title";
 import RoundedSearchBar from "./RoundedSearchBar";
 import {styled} from "@mui/material/styles";
 import {Box, BoxProps, SxProps, Theme, Typography} from "@mui/material";
 import bulbasaur from "../resources/bulbasaur.svg";
-import RadioGroup from "@mui/material/RadioGroup";
-import Radio from "@mui/material/Radio";
-import FormControlLabel from '@mui/material/FormControlLabel';
+// import RadioGroup from "@mui/material/RadioGroup";
+// import Radio from "@mui/material/Radio";
+// import FormControlLabel from '@mui/material/FormControlLabel';
 
 interface PokemonBarProperty extends BoxProps {
     onSubmit?: () => void;

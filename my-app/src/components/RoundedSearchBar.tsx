@@ -209,6 +209,7 @@ export default function RoundedSearchBar({onClick, sortOrder}: RoundedSearchBarP
                         loading="lazy"
                         height="40"
                         width="40"
+                        alt=""
                         src={option.gif}
                         style={{ objectFit: 'contain' }}
                         onError={(e) => {
