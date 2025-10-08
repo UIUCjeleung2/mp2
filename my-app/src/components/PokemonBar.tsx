@@ -52,7 +52,7 @@ function PokemonBar({sx, onSubmit, onClick}: PokemonBarProperty) {
     // }, [])
 
     // true is ascending, false is descending
-    const [sortOrder, setSortOrder] = React.useState("descending");
+    //const [sortOrder, setSortOrder] = React.useState("descending");
     // const handleSortChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     //   setSortOrder(event.target.value);
     // };
