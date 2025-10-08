@@ -6,6 +6,7 @@ import Gallery from "../components/BoxOfCards";
 import { useNavigate } from 'react-router-dom';
 import Stack from "@mui/material/Stack";
 import BGImage from '../components/BGImage';
+import { useState, useEffect } from 'react';
 // The thing about these two pages is that
 // both boxes are placed in the same place so
 // the illusion of it being there is made, but
