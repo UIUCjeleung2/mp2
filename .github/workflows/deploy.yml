@@ -38,6 +38,7 @@ jobs:
 
       - name: Build site
         run: npm run build
+        working-directory: my-app
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
