@@ -16,9 +16,9 @@ function App() {
         <div className='App'>
             <BrowserRouter>
                 <Routes>
-                    <Route path = "/" element = {<OriginalPage/>}></Route>
-                    <Route path = "/pokemon" element = {<OtherPage/>}></Route> 
-                    <Route path = "/pokemon/:name/:id" element = {<PokemonPage/>}></Route>
+                    <Route path = "/mp2" element = {<OriginalPage/>}></Route>
+                    <Route path = "/mp2/pokemon" element = {<OtherPage/>}></Route> 
+                    <Route path = "/mp2/pokemon/:name/:id" element = {<PokemonPage/>}></Route>
                 </Routes>
             </BrowserRouter>
         </div>
