@@ -52,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 interface RoundedSearchBarProperty {
     onClick?: () => void;
-    sortOrder?: string;
+    sortOrder: string;
 }
 
 
