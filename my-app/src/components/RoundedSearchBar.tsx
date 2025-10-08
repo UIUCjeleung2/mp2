@@ -99,15 +99,15 @@ const filter = createFilterOptions<{name: string; gif: string}> ({
     limit: 50,
 })
 
-// const sortedFilter = (options: { name: string; gif: string }[], state: any, order: string) => {
-//   const filtered = filter(options, state);
+const sortedFilter = (options: { name: string; gif: string }[], state: any, order: string | undefined) => {
+  const filtered = filter(options, state);
 
-//   return filtered.sort((a, b) =>
-//     order === 'ascending'
-//       ? a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
-//       : b.name.localeCompare(a.name, undefined, { sensitivity: 'base' })
-//   );
-// };
+  return filtered.sort((a, b) =>
+    order === 'ascending'
+      ? a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+      : b.name.localeCompare(a.name, undefined, { sensitivity: 'base' })
+  );
+};
 
 export default function RoundedSearchBar({onClick, sortOrder}: RoundedSearchBarProperty) {
     const [options, setOptions] = useState<{name: string, gif: string}[]>([]);
@@ -190,7 +190,7 @@ export default function RoundedSearchBar({onClick, sortOrder}: RoundedSearchBarP
             onClose={() => setOpen(false)}
             inputValue={searchValue}
             popupIcon={null}
-            filterOptions={filter}
+            filterOptions={(option, state) => sortedFilter(option, state, sortOrder)}
             options={options}
             getOptionLabel={(option) => option.name}
             value={options.find((opt) => opt.name === searchValue) || null}

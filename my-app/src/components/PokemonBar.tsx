@@ -12,9 +12,9 @@ import RoundedSearchBar from "./RoundedSearchBar";
 import {styled} from "@mui/material/styles";
 import {Box, BoxProps, SxProps, Theme} from "@mui/material";
 import bulbasaur from "../resources/bulbasaur.svg";
-// import RadioGroup from "@mui/material/RadioGroup";
-// import Radio from "@mui/material/Radio";
-// import FormControlLabel from '@mui/material/FormControlLabel';
+import RadioGroup from "@mui/material/RadioGroup";
+import Radio from "@mui/material/Radio";
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 interface PokemonBarProperty extends BoxProps {
     onSubmit?: () => void;
@@ -52,10 +52,10 @@ function PokemonBar({sx, onSubmit, onClick}: PokemonBarProperty) {
     // }, [])
 
     // true is ascending, false is descending
-    //const [sortOrder, setSortOrder] = React.useState("descending");
-    // const handleSortChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //   setSortOrder(event.target.value);
-    // };
+    const [sortOrder, setSortOrder] = React.useState("descending");
+    const handleSortChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setSortOrder(event.target.value);
+    };
 
     const handleSearchSubmit = () => {
         // setTriggerAnimation(true);
@@ -74,14 +74,14 @@ function PokemonBar({sx, onSubmit, onClick}: PokemonBarProperty) {
                 style={{width: "150px", height: "auto"}}/>
             <Title></Title>
 
-            {/* <RadioGroup
+            <RadioGroup
               row
               value={sortOrder}
               onChange={handleSortChange}
             >
                 <FormControlLabel value="ascending" control={<Radio />} label="Ascending" />
                 <FormControlLabel value="descending" control={<Radio />} label="Descending" />
-            </RadioGroup> */}
+            </RadioGroup>
 
             <RoundedSearchBar onClick = {handleSearchSubmit}></RoundedSearchBar>
 

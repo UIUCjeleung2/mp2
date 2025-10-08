@@ -26,7 +26,7 @@ const PokedexPage = () => {
   // For bringing back the cornerBox and getting rid of the other boxes
   const [returnFromCorner, setReturnFromCorner] = useState(false);
   // What generation of Pokemon to display
-  const [generation, setGeneration] = useState(3);
+  const [generation, setGeneration] = useState(1);
 
   // Routing
   const navigate = useNavigate();
