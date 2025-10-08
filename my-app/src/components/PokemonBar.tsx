@@ -10,7 +10,7 @@ import React from "react";
 import Title from "./Title";
 import RoundedSearchBar from "./RoundedSearchBar";
 import {styled} from "@mui/material/styles";
-import {Box, BoxProps, SxProps, Theme, Typography} from "@mui/material";
+import {Box, BoxProps, SxProps, Theme} from "@mui/material";
 import bulbasaur from "../resources/bulbasaur.svg";
 // import RadioGroup from "@mui/material/RadioGroup";
 // import Radio from "@mui/material/Radio";
@@ -53,9 +53,9 @@ function PokemonBar({sx, onSubmit, onClick}: PokemonBarProperty) {
 
     // true is ascending, false is descending
     const [sortOrder, setSortOrder] = React.useState("descending");
-    const handleSortChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setSortOrder(event.target.value);
-    };
+    // const handleSortChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    //   setSortOrder(event.target.value);
+    // };
 
     const handleSearchSubmit = () => {
         // setTriggerAnimation(true);

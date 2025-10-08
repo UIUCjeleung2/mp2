@@ -240,6 +240,7 @@ export default function RoundedSearchBar({onClick, sortOrder}: RoundedSearchBarP
 
                 <Box onClick={onClick}>
                     <img src={pokedex}
+                    alt = ""
                     width="30"
                     height="30"
                     style = {{

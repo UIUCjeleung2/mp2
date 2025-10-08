@@ -1,4 +1,3 @@
-import react from "react"
 import { Box } from "@mui/material"
 import bg from "../resources/bg.jpg";
 

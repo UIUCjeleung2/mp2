@@ -31,7 +31,7 @@ export default function PokemonPage() {
         fetchData();
         const timer = setTimeout(() => setSlideIn(true), 10);
         return () => clearTimeout(timer);
-    }, [id]);
+    }, [id, name]);
 
 
     return (
