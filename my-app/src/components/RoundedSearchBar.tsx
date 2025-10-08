@@ -52,6 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 interface RoundedSearchBarProperty {
     onClick?: () => void;
+    sortOrder: string;
 }
 
 
@@ -98,7 +99,17 @@ const filter = createFilterOptions<{name: string; gif: string}> ({
     limit: 50,
 })
 
-export default function RoundedSearchBar({onClick}: RoundedSearchBarProperty) {
+const sortedFilter = (options: { name: string; gif: string }[], state: any, order: string) => {
+  const filtered = filter(options, state);
+
+  return filtered.sort((a, b) =>
+    order === 'ascending'
+      ? a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+      : b.name.localeCompare(a.name, undefined, { sensitivity: 'base' })
+  );
+};
+
+export default function RoundedSearchBar({onClick, sortOrder}: RoundedSearchBarProperty) {
     const [options, setOptions] = useState<{name: string, gif: string}[]>([]);
 
     useEffect(()=> {
@@ -179,7 +190,7 @@ export default function RoundedSearchBar({onClick}: RoundedSearchBarProperty) {
             onClose={() => setOpen(false)}
             inputValue={searchValue}
             popupIcon={null}
-            filterOptions={filter}
+            filterOptions={(options, state) => sortedFilter(options, state, sortOrder)}
             options={options}
             getOptionLabel={(option) => option.name}
             value={options.find((opt) => opt.name === searchValue) || null}
